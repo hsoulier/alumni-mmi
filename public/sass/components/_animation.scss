@@ -1,0 +1,25 @@
+@keyframes carrouselSlide {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(0);
+    }
+
+    37.5% {
+        transform: translateX(-33.33%);
+    }
+
+    55.5% {
+        transform: translateX(-33.33%);
+    }
+
+    73% {
+        transform: translateX(-66.66%);
+    }
+
+    100% {
+        transform: translateX(-66.66%);
+    }
+}

@@ -1,0 +1,160 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class],
+li {
+    list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: 0;
+}
+
+html,
+body {
+    scrollbar-width: none;
+}
+
+
+body {
+    font-size: 18px;
+    background: $bgClr;
+    color: $textClr;
+    font-family: $fontSans;
+}
+
+h1 {
+    font-family: $fontBold;
+    // font-size: 5rem;
+    line-height: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-family: $fontSans;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 3rem;
+    font-style: italic;
+}
+
+h3 {
+    font-family: $fontSans;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+i {
+    display: inline !important;
+}
+
+.btn {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: $textClr;
+    color: $bgClr;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    border: 2px solid #000;
+    padding: 0.5rem 0.85rem;
+    text-transform: uppercase;
+    
+    &:hover {
+        background-color: $bgClr;
+        border-color: $textClr;
+        color: $textClr;
+    }
+}
+

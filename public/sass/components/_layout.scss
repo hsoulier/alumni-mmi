@@ -1,0 +1,36 @@
+.header {
+    &__container {
+        width: 85%;
+        margin:  10px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__img {
+        position: relative;
+        width: 150px;
+    }
+    
+    &__navLinks {
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__navLinks li + li {
+        margin-left: 15px;
+    }
+
+    &__navLinks a {
+        text-decoration: none;
+        color: $textClr;
+    }
+    &__navLinks a.btn {
+        color: $bgClr;
+    }
+
+    &__navLinks i {
+        padding-right: 5px;
+    }
+}
