@@ -622,4 +622,71 @@ pre {
   overflow: auto;
   line-height: 1.2rem;
 }
+
+.article__container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.article__left {
+  width: 70%;
+  margin-right: 20px;
+}
+
+.article__left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.article__img {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}
+
+.article__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+.article__text {
+  width: 30%;
+}
+
+.article__text h3 {
+  color: #746b6b;
+  font-size: 1.3rem;
+}
+
+.article__text h6 {
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.article__text h1 {
+  margin-bottom: 0.7rem;
+}
 /*# sourceMappingURL=main.css.map */

@@ -7,14 +7,14 @@ if (!empty($_POST['login']) and !empty($_POST['pwd'])) {
     require '../../src/Model/admin.php';
 }
 
+echo '<pre>';
+print_r($_POST);
+echo '</pre>';
+
 ?>
 
-
-
-
-
 <div class="form-admin">
-    <form action="./login" method="post" class="form-admin__form">
+    <form action="<?= $router->generate('admin') ?>" method="post" class="form-admin__form">
         <input type="text" class="pseudo" name="login" required>
         <p class="form-admin__pseudo">Pseudo</p>
         <input type="password" class="pwd" name="pwd" required>

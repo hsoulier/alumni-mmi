@@ -2,6 +2,7 @@
 use App\Model;
 require_once "../src/frontend.php";
 $i = 1;
+
 ?>
 
 <div id="app">

@@ -22,6 +22,7 @@ class Connexion {
             $bdd = new PDO('mysql:host=localhost;dbname=' . $this->db, $this->login, $this->pass);
             $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
             $bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+            $bdd->exec('SET NAMES utf8');
             $this->connec = $bdd;
         } catch (PDOException $e) {
             $msg = 'ERREUR PDO dans ' . $e->getFile() . ' L.' . $e->getLine() . ' : ' . $e->getMessage();

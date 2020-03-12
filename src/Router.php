@@ -24,16 +24,21 @@ class Router
     {
         $match = $this->router->match();
         $view = $match['target'];
-        // if ($match === false) {
-        //     echo 'erreur de route';
-        //     header("Location: /error");
-        // }
+        if ($match === false) {
+            echo 'erreur de route';
+            header("Location: /error");
+        }
         ob_start();
-        require $this->viewPath . DIRECTORY_SEPARATOR . $view . '.php';
+        require $this->viewPath . DIRECTORY_SEPARATOR . $view;
         $content = ob_get_clean();
         
         require $this->viewPath . DIRECTORY_SEPARATOR . 'layout/default.php';
 
         return $this;
+    }
+
+    public function generate(string $link, ?array $params = null)
+    {
+        $this->router->generate($link, $params);
     }
 }
