@@ -39,7 +39,7 @@ class Text {
                 $key = utf8_encode($key);
             }
             if (is_array($value)) {
-                utf8_string_array_encode($value);
+                Text::utf8_string_array_encode($value);
             }
         };
         array_walk($array, $func);

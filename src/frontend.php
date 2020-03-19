@@ -3,9 +3,9 @@
 
 use \App\Model\Connexion, \App\Helpers\Text;
 
-require "Model/Connexion.php";
-require "Helpers/Text.php";
-require "constant.php";
+require_once "Model/Connexion.php";
+require_once "Helpers/Text.php";
+require_once "constant.php";
 
 
 $r = new Connexion('refonte-site');

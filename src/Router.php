@@ -14,12 +14,12 @@ class Router
         $this->router = new \AltoRouter();
     }
 
-    public function get(string $url, string $view, ?string $name = null): self
+    public function get(string $mtd, string $url, string $view, ?string $name = null): self
     {
-        $this->router->map('GET', $url, $view, $name);
+        $this->router->map($mtd, $url, $view, $name);
         return $this;
     }
-    
+
     public function run(): self
     {
         $match = $this->router->match();
@@ -28,11 +28,14 @@ class Router
             echo 'erreur de route';
             header("Location: /error");
         }
-        ob_start();
-        require $this->viewPath . DIRECTORY_SEPARATOR . $view;
-        $content = ob_get_clean();
-        
-        require $this->viewPath . DIRECTORY_SEPARATOR . 'layout/default.php';
+        if ($match['name'] !== "administration") {
+            ob_start();
+            require $this->viewPath . DIRECTORY_SEPARATOR . $view;
+            $content = ob_get_clean();
+            require $this->viewPath . DIRECTORY_SEPARATOR . 'layout/default.php';
+        } else {
+            require $this->viewPath . DIRECTORY_SEPARATOR . $view;
+        }
 
         return $this;
     }

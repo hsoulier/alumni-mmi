@@ -1,10 +1,12 @@
 <?php
+session_start();
 
 use App\Model, App\Helpers\Text;
 
 $title = "Articles";
 
-$id = substr($_SERVER['REQUEST_URI'], -1);
+$id = explode("-", $_SERVER['REQUEST_URI']);
+$id = end($id);
 
 require_once "../src/frontend.php";
 $pageArticle = $r->q(
@@ -33,7 +35,7 @@ $time = date("H:i", strtotime($pageArticle['dateArticle'][1]));
     <div class="article__container">
         <div class="article__left">
             <div class="article__img">
-                <img src="/img/<?= $pageArticle['linkImg'] ?>" alt="">
+                <img src="<?= $pageArticle['linkImg'] ?>" alt="">
             </div>
             <ul>
                 <li>RS</li>

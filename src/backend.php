@@ -2,8 +2,9 @@
 
 use \App\Model\Connexion, \App\Helpers\Text;
 
-require "Model/Connexion.php";
-require "Helpers/Text.php";
+require_once "Model/Connexion.php";
+require_once "Helpers/Text.php";
+require_once "constant.php";
 
 $r = new Connexion('refonte-site');
 
@@ -13,8 +14,8 @@ $req = $r->q(
     [
         [
             'type',
-            'Alumni Story'
-            // PDO::PARAM_STR
+            'Alumni Story',
+            PDO::PARAM_STR
         ]
     ]
 );

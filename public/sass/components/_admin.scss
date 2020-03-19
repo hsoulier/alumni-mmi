@@ -1,5 +1,4 @@
 .form-admin {
-    // border: 1px solid #000;
     margin: auto;
     margin-top: 20vh;
     padding: 50px;
@@ -153,6 +152,7 @@
     overflow: auto;
     justify-content: space-around;
     align-items: center;
+    height: 85vh;
 
     &__card {
         // border: 1px solid #000;
@@ -164,7 +164,7 @@
         margin-top: 50px;
         padding: 10px 15px;
         background: $white;
-        border-radius: 10px;
+        // border-radius: 10px;
         min-height: 200px;
         box-shadow: 2px 2px 5px rgba(39, 38, 38, 0.2);
     }

@@ -1,49 +1,26 @@
 <?php
 session_start();
-// session_destroy();
+
 $title = "Connexion administration";
 $error = null;
-if (!empty($_POST['login']) and !empty($_POST['pwd'])) {
-    require '../../src/Model/admin.php';
+if (!empty($_POST['loginAdmin']) and !empty($_POST['pwdAdmin'])) {
+    require '../src/admin.php';
 }
-
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
 
 ?>
 
-<div class="form-admin">
-    <form action="<?= $router->generate('admin') ?>" method="post" class="form-admin__form">
-        <input type="text" class="pseudo" name="login" required>
-        <p class="form-admin__pseudo">Pseudo</p>
-        <input type="password" class="pwd" name="pwd" required>
-        <p class="form-admin__pwd">Mot de passe</p>
-        <button type="submit" class='btn'>Se connecter</button>
-    </form>
-    <div>
-        <?= $error ?>
+<div id="app">
+    <h1>Panneau d'aministration</h1>
+    <div class="form-admin">
+        <form action="/admin/login" method="post" class="form-admin__form">
+            <input type="text" class="pseudo" name="loginAdmin" required>
+            <p class="form-admin__pseudo">Pseudo</p>
+            <input type="password" class="pwd" name="pwdAdmin" required>
+            <p class="form-admin__pwd">Mot de passe</p>
+            <button type="submit" class='btn'>Se connecter</button>
+        </form>
+        <div>
+            <?= $error ?>
+        </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-<?php
-
-
-
-
-// $_SESSION['login'] = 'admin';
-// $_SESSION['pwd'] = 'admin';
-
-// header('Location: refonte-alumni/admin');
-// header("Location: /refonte-alumni/admin");

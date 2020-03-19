@@ -1,7 +1,9 @@
 .header {
+    // background: $lightBlue;
     &__container {
         width: 85%;
-        margin:  10px auto;
+        margin:0 auto;
+        padding: 10px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -22,15 +24,84 @@
         margin-left: 15px;
     }
 
-    &__navLinks a {
+    &__navLinks li a {
         text-decoration: none;
-        color: $textClr;
+        color: inherit;
     }
-    &__navLinks a.btn {
-        color: $bgClr;
+
+    &__navLinks .btn a {
+        color: inherit;
     }
 
     &__navLinks i {
+        font-size: 1rem;
+        font-weight: lighter;
         padding-right: 5px;
+    }
+}
+
+.footer {
+    margin-top: 2rem;
+    padding: 50px 0;
+
+    &__container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul li {
+        display: inline-block;
+        color: $blue;
+        text-transform: uppercase;
+        margin: 0 20px;
+    }
+
+    li a {
+        color: inherit;
+        font-size: 1rem;
+    }
+
+
+    form {
+        position: relative;
+        min-width: 270px;
+        width: 270px;
+        height: 50px;
+        width: 20%;
+
+        input {
+            position: absolute;
+            width: 85%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            padding-left: 10px;
+
+            &::placeholder,
+            &::-moz-placeholder {
+                font-size: 1rem;
+            }
+        }
+
+        button {
+            border-radius: 0 5px 5px 0;
+            border: none;
+            background: $orange;
+            position: absolute;
+            width: 15%;
+            height: 100%;
+            top: 0;
+            right: 0;
+        }
+        button i {
+            font-size: 1rem;
+            color: $white;
+        }
     }
 }

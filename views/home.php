@@ -1,6 +1,10 @@
 <?php
+session_start();
+
 use App\Model;
+
 require_once "../src/frontend.php";
+
 $i = 1;
 
 ?>
@@ -23,17 +27,17 @@ $i = 1;
     </div>
     <div class="lastArticles">
         <div class="lastArticles__container">
-            <h1>Les derniers articles</h1>
+            <h1 data-aos="fade-in">Les derniers articles</h1>
             <?php foreach ($lastArticles as $article) : ?>
-                <div class="lastArticles__article article<?= $i ?>">
+                <div class="lastArticles__article article<?= $i ?>" data-aos="fade-up">
                     <div class="lastArticles__img">
-                        <img src="<?= IMG . $article['linkThumb'] ?>" alt="">
+                        <img src="<?= $article['linkThumb'] ?>" alt="">
                     </div>
                     <div class="lastArticles__text">
                         <h3><?= $article['typeArticle'] ?></h3>
                         <h1><?= $article['titleArticle'] ?></h1>
                         <p><?= substr($article['textArticle'], 0, 100) . "..." ?></p>
-                        <a href="/refonte-alumin/articles?id=<?= $article['id'] ?>" class="btn">Voir la story</a>
+                        <a href="/alumni-story-<?= $i ?>" class="btn">Voir la story</a>
                     </div>
                 </div>
                 <?php $i++; ?>

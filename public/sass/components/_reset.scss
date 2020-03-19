@@ -38,7 +38,8 @@ body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
+    line-height: 1.2;
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
@@ -84,10 +85,12 @@ select {
 }
 
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1rem;
 }
 
 ::-webkit-scrollbar {
@@ -110,7 +113,7 @@ body {
 
 h1 {
     font-family: $fontBold;
-    // font-size: 5rem;
+    font-size: 3.2rem;
     line-height: 2.5rem;
 }
 
@@ -120,7 +123,7 @@ a {
 
 p {
     font-family: $fontSans;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.7rem;
     font-weight: 300;
 }
@@ -138,23 +141,53 @@ h3 {
 
 i {
     display: inline !important;
+    font-size: 2rem;
 }
 
 .btn {
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    background-color: $textClr;
-    color: $bgClr;
-    border-radius: 5px;
-    margin-top: 0.5rem;
-    border: 2px solid #000;
+    background: $orange;
+    border-color: $orange;
+    border: 2px solid $orange;
+    color: $white;
     padding: 0.5rem 0.85rem;
     text-transform: uppercase;
+    transition: all .3s ease;
     
+    & * {
+        transition: all .3s ease;
+        color: $white;
+    }
+
     &:hover {
-        background-color: $bgClr;
-        border-color: $textClr;
+        background: lighten($orange, 10%);
+        border-color: lighten($orange, 10%);
         color: $textClr;
+        cursor: pointer;
+        & * {
+            color: $textClr;
+            
+        }
     }
 }
 
+.btn:hover,
+button:hover,
+input[type=submit]:hover {
+    cursor: pointer;
+    transition: all .3s ease;
+    & * {
+        color: $textClr;
+
+    }
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+input[type=text], input[type=password], input[type=text], input[type=email] {
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid $orange;
+}

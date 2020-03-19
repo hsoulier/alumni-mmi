@@ -1,11 +1,13 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['login']) and !isset($_SESSION['pwd'])) {
-    header("Location: /admin/login");
-    die();
+if (!isset($_SESSION['loginAdmin']) || !isset($_SESSION['pwdAdmin'])) {
+    die(header("Location: /admin/login"));
 }
-require '../../model/backend.php';
+
+use App\Model;
+
+require_once "../src/backend.php";
 
 if (isset($_POST['log-out'])) {
     logOut();
@@ -43,8 +45,8 @@ function logOut()
         <aside class="leftNav-admin">
             <div class="leftNav-admin__container">
                 <div class="leftNav-admin__logo">
-                    <a href="/refonte-alumni/"><img src="/refonte-alumni/public/img/logo-alumni.png" alt="Logo alumni"></a>
-                    <p>Bonjour <br><?= $_SESSION['login'] ?></p>
+                    <a href="/"><img src="/img/logo-alumni.png" alt="Logo alumni"></a>
+                    <p>Bonjour <br><?= $_SESSION['loginAdmin'] ?></p>
                 </div>
                 <ul>
                     <li data-link="dash-infos"><i class="fas fa-home"></i>Dashboard</li>
@@ -79,7 +81,7 @@ function logOut()
                         <div class="dash-article-card__card">
                             <h4 class="dash-article-card__title"><?= $article['titleArticle'] ?></h4>
                             <p><?= substr($article['textArticle'], 0, 100) . "..." ?></p>
-                            <div><a href="/refonte-alumin/articles?id=<?= $article['id'] ?>">Voir</a><span><i class="fas fa-edit"></i><i class="fas fa-trash"></i></span></div>
+                            <div><a href="/alumni-story-<?= $article['id'] ?>">Voir</a><span><i class="fas fa-edit"></i><i class="fas fa-trash"></i></span></div>
                         </div>
                         
                         <div class="dash-article-card__card">
