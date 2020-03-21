@@ -35,6 +35,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;
@@ -112,6 +117,11 @@ body {
   background: #f1eaea;
   color: #111010;
   font-family: "Montserrat", sans-serif;
+}
+
+#app {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 h1 {
@@ -318,6 +328,10 @@ input[type=text], input[type=password], input[type=text], input[type=email] {
 .footer form button i {
   font-size: 1rem;
   color: #eff5f1;
+}
+
+#app.homepage {
+  margin-top: 0;
 }
 
 .carrousel {
@@ -823,16 +837,6 @@ input[type=password]:valid + .form-admin__pwd {
   }
 }
 
-html, body {
-  height: 100%;
-}
-
-pre {
-  width: 100vw;
-  overflow: auto;
-  line-height: 1.2rem;
-}
-
 .error404 {
   height: 60vh;
   display: -webkit-box;
@@ -937,5 +941,21 @@ pre {
 
 .login-signin__left {
   border-right: 1px solid black;
+}
+
+.directory__container {
+  width: 80%;
+  margin: auto;
+}
+
+.directory__navName {
+  margin: 20px auto;
+  border: 1px solid #000;
+  max-width: 1000px;
+}
+
+.directory__letters {
+  background: #bbd9ff;
+  padding: 10px;
 }
 /*# sourceMappingURL=main.css.map */

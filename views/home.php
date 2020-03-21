@@ -9,7 +9,7 @@ $i = 1;
 
 ?>
 
-<div id="app">
+<div id="app" class="homepage">
     <div class="carrousel">
         <div class="carrousel__container">
             <div class="carrousel__item item1">

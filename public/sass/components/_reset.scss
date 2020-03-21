@@ -33,6 +33,11 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 /* Set core body defaults */
 body {
     min-height: 100vh;
@@ -109,6 +114,11 @@ body {
     background: $bgClr;
     color: $textClr;
     font-family: $fontSans;
+}
+
+#app {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 h1 {

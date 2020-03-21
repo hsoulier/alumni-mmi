@@ -10,7 +10,7 @@ $router
     ->get('POST', '/admin', 'private/admin.php', "administration-form")
     ->get('POST', '/admin/login', 'private/login.php', "connexionAdmin-form")
     ->get('GET', '/admin/login', 'private/login.php', "Connexion administration")
-    ->get('GET', '/contact', 'contact.php', "Contact")
+    // ->get('GET', '/contact', 'contact.php', "Contact")
     ->get('GET', '/articles', 'articles.php', "Articles")
     ->get('GET', '/about', 'about.php', "A propos")
     ->get('GET', '/alumni-story-[i:id]', 'alumni-story.php', "article Alumni")

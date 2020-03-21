@@ -6,16 +6,6 @@
 @import "components/admin";
 @import "components/animation";
 
-html, body {
-    height: 100%;
-}
-
-pre {
-    width: 100vw;
-    overflow: auto;
-    line-height: 1.2rem;
-}
-
 .error404 {
     height: 60vh;
     display: flex;
@@ -84,5 +74,21 @@ pre {
     }
     &__left {
         border-right: 1px solid black;
+    }
+}
+
+.directory {
+    &__container {
+        width: 80%;
+        margin: auto;
+    }
+    &__navName {
+        margin: 20px auto;
+        border: 1px solid #000;
+        max-width: 1000px;
+    }
+    &__letters {
+        background: lighten($lightBlue, 10%);
+        padding: 10px;
     }
 }
