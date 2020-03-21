@@ -1,8 +1,8 @@
 <?php
+session_start();
 $title = "Se connecter";
 
 $error = null;
-
 
 
 if (isset($_POST['signPwd'], $_POST['signPwdConf']) && $_POST['signPwd'] !== $_POST['signPwdConf']) {

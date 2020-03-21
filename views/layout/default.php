@@ -26,10 +26,10 @@
             <ul class="header__navLinks">
                 <li><a href="/articles">Articles</a></li>
                 <li><a href="/about">association</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="/directory">annuaire</a></li>
                 <li>
                     <div class="btn">
-                        <a href="/login"><i class="far fa-user-circle"></i>Se connecter</a>
+                        <a href="/login"><i class="far fa-user-circle"></i><?= isset($_SESSION['login']) ? $_SESSION['login'] : 'Se connecter' ?></a>
                     </div>
                 </li>
             </ul>
@@ -47,7 +47,7 @@
             <ul>
                 <li><a href="/">Accueil</a></li>
                 <li><a href="/articles">Articles</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="/annuaire">annuaire</a></li>
             </ul>
             <form action="/emailing" method="post">
                 <input type="email" name="mail" class="email" placeholder="S'abonner aux newsletter">

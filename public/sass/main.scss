@@ -78,17 +78,33 @@
 }
 
 .directory {
+    margin-top: 30px;
     &__container {
         width: 80%;
         margin: auto;
     }
     &__navName {
         margin: 20px auto;
-        border: 1px solid #000;
         max-width: 1000px;
     }
     &__letters {
-        background: lighten($lightBlue, 10%);
         padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__letters a {
+        font-size: 1.2rem;
+        color: $orange;
+        font-weight: 700;
+        border-bottom: 0 solid $yellow;
+        transition: color .3s ease, border-bottom .5s ease;
+        padding: 0 5px;
+        display: inline-block;
+        height: calc(1.2rem + 5px);
+        &:hover {
+            color: $yellow;
+            border-bottom: 3px solid $yellow;
+        }
     }
 }

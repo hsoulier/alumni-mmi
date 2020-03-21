@@ -1,10 +1,9 @@
 <?php
 session_start();
-$title = "Annuaire";
-print_r($_SESSION);
+$title = "Annuaire Alumni";
 if (!isset($_SESSION['email'])) {
-    // die(header('Location: /login'));
-    echo 'variables de session pas construite';
+    die(header('Location: /login'));
+    // echo 'variables de session pas construite';
 }
 ?>
 
